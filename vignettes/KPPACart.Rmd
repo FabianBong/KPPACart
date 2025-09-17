@@ -1,5 +1,5 @@
 ---
-title: "kPPA‑CART: Reproducible analysis & benchmarking"
+title: 'kPPA‑CART: Reproducible analysis & benchmarking'
 author: "Fabian Bong & Tobias K. Karakach"
 date: "`r format(Sys.time(), '%Y-%m-%d')`"
 output:
@@ -7,23 +7,23 @@ output:
     toc: true
     toc_float: true
     css: corrected.css
-    number_sections: no
+    number_sections: false
+    df_print: paged
+  html_document:
+    toc: true
     df_print: paged
   pdf_document:
     toc: true
     number_sections: true
 params:
-  # Toggle which studies to run (TRUE = run, FALSE = skip)
   run_takemon: true
   run_tcga_brca: true
   run_aurora: true
-  # Local paths (set to NULL to auto-download where supported)
-  takemon_proteomics_path: NULL
-  takemon_rnaseq_path: NULL
-  aurora_rnaseq_geo: "GSE209998"
-  aurora_methylation_geo: "GSE212375"
+  takemon_proteomics_path: null
+  takemon_rnaseq_path: null
+  aurora_rnaseq_geo: GSE209998
+  aurora_methylation_geo: GSE212375
   tcga_project: "TCGA-BRCA"
-  # kPPA‑CART hyperparameters (defaults mirror manuscript)
   kppa_t_dims: 30
   takemon_f_prot: 800
   takemon_f_rna: 500
